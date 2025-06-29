@@ -1,66 +1,66 @@
-## Foundry
+# Vesting Wallet Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A smart contract implementation for token vesting with time-based release schedules. Built with Solidity and Foundry.
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This project implements a vesting wallet system that allows tokens to be locked and gradually released to beneficiaries according to a predefined schedule. It's useful for team token allocations, investor distributions, and other scenarios requiring controlled token release.
 
-## Documentation
+## Features
 
-https://book.getfoundry.sh/
+- Time-based vesting schedule
+- ERC20 token support
+- Secure access control
+- Configurable vesting parameters
 
-## Usage
+## Smart Contracts
+
+- `VestToken.sol`: An ERC20 token used for demonstration purposes
+- `VestingWallet.sol`: The main vesting contract that handles token lockup and release
+
+## Development
+
+This project is built using [Foundry](https://book.getfoundry.sh/), a blazing fast Ethereum development toolkit.
+
+### Prerequisites
+
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/veerbal1/vesting-project.git
+cd vesting-project
+```
+
+2. Install dependencies:
+```bash
+forge install
+```
 
 ### Build
 
-```shell
-$ forge build
+```bash
+forge build
 ```
 
 ### Test
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
+```bash
+forge test
 ```
 
 ### Gas Snapshots
 
-```shell
-$ forge snapshot
+```bash
+forge snapshot
 ```
 
-### Anvil
+## License
 
-```shell
-$ anvil
-```
+MIT
 
-### Deploy
+## Author
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Veerbal Singh
